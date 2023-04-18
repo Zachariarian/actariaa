@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}Past Loans{% endblock %}
+
+{% block content %}
+
+  <h1>Past Loans</h1>
+
+  <table class="table">
+
+    <thead>
+
+      <tr>
+
+        <th>Loan Amount</th>
+
+        <th>Interest Rate (%)</th>
+
+        <th>Loan Term (years)</th>
+
+        <th>Monthly Payment</th>
+
+      </tr>
+
+    </thead>
+
+    <tbody>
+
+      {% for loan in loans %}
+
+        <tr>
+
+          <td>${{ loan.amount }}</td>
+
+          <td>{{ loan.interest_rate }}</td>
+
+          <td>{{ loan.term }}</td>
+
+          <td>${{ loan.monthly_payment }}</td>
+
+        </tr>
+
+      {% endfor %}
+
+    </tbody>
+
+  </table>
+
+{% endblock %}
+
