@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Loan Submitted{% endblock %}
+
+{% block content %}
+
+  <h1>Loan Application Submitted</h1>
+
+  <p>Your loan application has been submitted successfully!</p>
+
+  <p>Loan Amount: ${{ amount }}</p>
+
+  <p>Interest Rate: {{ interest_rate }}%</p>
+
+  <p>Loan Term: {{ term }} years</p>
+
+  <a href="/" class="btn btn-primary">Apply for Another Loan</a>
+
+{% endblock %}
+
