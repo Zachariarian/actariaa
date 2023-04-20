@@ -13,8 +13,10 @@ from wtforms.validators import DataRequired, NumberRange
 import os
 
 # Create the Flask application instance
+from routes import example_bp
 
 app = Flask(__name__)
+app.register_blueprint(example_bp, url_prefix='/example')
 
 # Set configuration options
 
